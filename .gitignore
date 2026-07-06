@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# VS Code
+.vscode/settings.json
+
+# Environment Variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Ollama
+*.gguf
+
+# Build
+dist/
+build/
+
+# Python Cache
+.pytest_cache/
+.mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/
