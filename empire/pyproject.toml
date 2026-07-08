@@ -1,0 +1,5 @@
+[project]
+name = "empire"
+version = "0.1.0"
+description = "AI Empire CLI"
+requires-python = ">=3.12"
