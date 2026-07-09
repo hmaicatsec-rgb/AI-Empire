@@ -1,4 +1,5 @@
 from .ai import chat_with_ai
+from .config import MODEL_NAME
 
 
 def main():
@@ -36,7 +37,8 @@ def main():
 
         elif choice == "2":
             print("\nEmpire AI")
-            print("Version: 0.1")
+            print("Version: 0.2")
+            print(f"Current Model: {MODEL_NAME}")
             print("Built by Ahsan & ChatGPT")
 
         elif choice == "3":

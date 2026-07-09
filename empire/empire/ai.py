@@ -1,9 +1,11 @@
 import subprocess
 
+from .config import MODEL_NAME
 
-def chat_with_ai(message: str) -> str:
+
+def chat_with_ai(message):
     result = subprocess.run(
-        ["ollama", "run", "qwen2.5-coder:7b", message],
+        ["ollama", "run", MODEL_NAME, message],
         capture_output=True,
         text=True,
         encoding="utf-8",
