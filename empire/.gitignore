@@ -13,3 +13,7 @@ __pycache__/
 
 # VS Code
 .vscode/
+
+empire/memory_*.json
+
+empire/memory.json

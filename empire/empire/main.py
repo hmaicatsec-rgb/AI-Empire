@@ -1,47 +1,40 @@
-from .ai import chat_with_ai
-from .config import MODEL_NAME
+from .chat import chat_menu
+from .settings import settings_menu
+from .config import get_current_model
+from .memory import load_memory
 
 
 def main():
+
     print("=" * 40)
     print("👑 Welcome to Empire AI")
     print("=" * 40)
 
     name = input("\nEnter your name: ")
+    load_memory(name)
 
     while True:
         print(f"\nHello, {name}")
         print("\n1. Chat")
         print("2. About")
-        print("3. Exit")
+        print("3. Settings")
+        print("4. Exit")
 
         choice = input("\nChoose: ")
 
         if choice == "1":
-            print("\n🤖 Empire AI Chat")
-            print("Type /exit to return to the menu.\n")
-
-            while True:
-                message = input("You: ")
-
-                if message.lower() == "/exit":
-                    print("\nLeaving chat...\n")
-                    break
-
-                print("\n🤖 Thinking...\n")
-
-                reply = chat_with_ai(message)
-
-                print(reply)
-                print()
+            chat_menu()
 
         elif choice == "2":
             print("\nEmpire AI")
-            print("Version: 0.2")
-            print(f"Current Model: {MODEL_NAME}")
-            print("Built by Ahsan & ChatGPT")
+            print("Version: 0.3")
+            print(f"Current Model: {get_current_model()}")
+            print("Built by Ahsan")
 
         elif choice == "3":
+            settings_menu()
+
+        elif choice == "4":
             print("\nGoodbye!")
             break
 
