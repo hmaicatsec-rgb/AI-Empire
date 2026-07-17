@@ -1,17 +1,19 @@
 from .chat import chat_menu
-from .settings import settings_menu
 from .config import get_current_model
 from .memory import load_memory
+from .settings import settings_menu
+from .smart_memory import load_smart_memory
 
 
 def main():
-
     print("=" * 40)
     print("👑 Welcome to Empire AI")
     print("=" * 40)
 
-    name = input("\nEnter your name: ")
+    name = input("\nEnter your name: ").strip()
+
     load_memory(name)
+    load_smart_memory(name)
 
     while True:
         print(f"\nHello, {name}")
@@ -27,7 +29,7 @@ def main():
 
         elif choice == "2":
             print("\nEmpire AI")
-            print("Version: 0.3")
+            print("Version: 0.5")
             print(f"Current Model: {get_current_model()}")
             print("Built by Ahsan")
 

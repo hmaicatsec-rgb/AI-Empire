@@ -9,11 +9,11 @@ def chat_menu():
     while True:
         message = input("You: ")
 
-        if message.lower() == "/exit":
+        if message.strip().lower() == "/exit":
             print("\nLeaving chat...\n")
             return
 
-        if message.lower() == "/clear":
+        if message.strip().lower() == "/clear":
             clear_messages()
             save_memory()
 

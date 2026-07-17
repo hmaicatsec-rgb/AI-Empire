@@ -1,19 +1,58 @@
+# -----------------------------
 # Python
+# -----------------------------
 __pycache__/
-*.pyc
+*.py[cod]
 
-# Ruff
-.ruff_cache/
-
+# -----------------------------
 # Virtual Environment
+# -----------------------------
 .venv/
+venv/
 
-# Environment Variables
+# -----------------------------
+# Environment Variables / Secrets
+# -----------------------------
 .env
+.env.*
+*.env
 
-# VS Code
-.vscode/
-
+# -----------------------------
+# User Data
+# -----------------------------
 empire/memory_*.json
-
+empire/smart_memory_*.json
 empire/memory.json
+
+# -----------------------------
+# Local Databases
+# -----------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+
+# -----------------------------
+# Python Tool Caches
+# -----------------------------
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# -----------------------------
+# IDE
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# Operating System
+# -----------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
